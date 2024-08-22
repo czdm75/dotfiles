@@ -1,0 +1,24 @@
+set clipboard+=unnamed
+set colorcolumn=121
+set relativenumber
+set number
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+nmap ; :
+nmap ； :
+nmap ： :
+imap jk <Esc>
+set timeoutlen=1000
+set ttimeoutlen=0
+set cursorline
+set cursorcolumn
+set ideajoin
+
+set NERDTree
+set easymotion
+set surround
+set commentary
+set highlightedyank
+set matchit
