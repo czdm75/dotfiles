@@ -20,7 +20,7 @@ return {
 	line_height = 1.0,
 
 
-	color_scheme = "Sonokai (Gogh)",
+	color_scheme = "Catppuccin Latte",
 	use_fancy_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
 	tab_bar_at_bottom = true,
