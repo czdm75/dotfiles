@@ -2,9 +2,12 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "noctis_lux",
+      background = "light"
     },
   },
+
+  { 'talha-akram/noctis.nvim' },
 
   {
     "echasnovski/mini.align",
@@ -28,17 +31,4 @@ return {
       },
     },
   },
-
-  -- Third Party Plugins
-
-  -- alternative tab bar
-  -- {
-  --   "romgrk/barbar.nvim",
-  --   init = function() vim.g.barbar_auto_setup = false end,
-  --   version = "^1.0.0", -- optional: only update when a new 1.x version is released
-  -- },
-
-  { "kaarmu/typst.vim", ft = { "typst" } },
-
-  { "nathangrigg/vim-beancount", ft = { "beancount" } },
 }

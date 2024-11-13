@@ -78,3 +78,15 @@ if type -q conda
     abbr -a -g ce "conda env list"
     abbr -a -g ca "conda activate"
 end
+
+if type -q cargo
+    abbr -a -g cb "cargo build"
+    abbr -a -g cr "cargo run"
+    abbr -a -g ct "cargo test"
+end
+
+if type -q docker
+    abbr -a -g d  "docker"
+    abbr -a -g dc "docker-compose"
+end
+

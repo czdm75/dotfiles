@@ -4,25 +4,17 @@ switch (uname)
         set -x LANG en_US.UTF-8
 end
 
-if type -q pyenv
-    set -x PYENV_ROOT $HOME/.pyenv
-    fish_add_path $PYENV_ROOT/bin
-    status is-login; and pyenv init --path --no-rehash | source
-    status is-interactive; and pyenv init - --no-rehash | source
-end
-
 if type -q mise
-    mise activate fish | source
+    mise activate fish --shims | source
 end
-
 
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.ghcup/bin
 fish_add_path $HOME/.cabal/bin
 fish_add_path $HOME/Library/Application\ Support/Coursier/bin
 
+type -q /opt/homebrew/bin/brew; and eval $(/opt/homebrew/bin/brew shellenv)
 type -q $HOME/.cargo/env; and source $HOME/.cargo/env
-type -q brew;             and eval $(brew shellenv)
 type -q zoxide;           and zoxide init fish | source
 type -q nvim;             and set -x EDITOR nvim
 
@@ -62,4 +54,4 @@ else
 end
 # <<< conda initialize <<<
 
-source $HOME/work.fish
+type -q "$HOME/work.fish"; and source $HOME/work.fish
