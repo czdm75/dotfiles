@@ -13,14 +13,13 @@ return {
 	default_prog = { fish_cmd(), "-l" },
 
 	font = wezterm.font_with_fallback {
-    { family = "Cascadia Code NF", weight = "DemiLight"},
+    { family = "Cascadia Next SC", weight="DemiBold" },
     "Noto Sans CJK SC Mono",
   },
-	font_size = 12,
-	line_height = 1.0,
+	font_size = 13,
+	line_height = 1.2,
 
-
-	color_scheme = "Catppuccin Latte",
+	color_scheme = "Solarized Light (Gogh)",
 	use_fancy_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
 	tab_bar_at_bottom = true,

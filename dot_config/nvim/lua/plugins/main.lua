@@ -2,7 +2,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "solarized",
+      background = "light"
     },
   },
 
@@ -37,6 +38,8 @@ return {
   --   init = function() vim.g.barbar_auto_setup = false end,
   --   version = "^1.0.0", -- optional: only update when a new 1.x version is released
   -- },
+
+  { "maxmx03/solarized.nvim" },
 
   { "kaarmu/typst.vim", ft = { "typst" } },
 
