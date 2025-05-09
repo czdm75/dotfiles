@@ -11,7 +11,6 @@ end
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.ghcup/bin
 fish_add_path $HOME/.cabal/bin
-fish_add_path $HOME/Library/Application\ Support/Coursier/bin
 
 type -q /opt/homebrew/bin/brew; and eval $(/opt/homebrew/bin/brew shellenv)
 type -q $HOME/.cargo/env; and source $HOME/.cargo/env
@@ -42,17 +41,5 @@ if status is-interactive
 end
 
 type -q "$HOME/work.fish"; and source $HOME/work.fish
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/homebrew/Caskroom/miniforge/base/bin/conda
-    eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
-        . "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/opt/homebrew/Caskroom/miniforge/base/bin" $PATH
-    end
-end
-# <<< conda initialize <<<
+type -q "/opt/homebrew/Caskroom/miniforge/base/bin/conda"; and eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
 
