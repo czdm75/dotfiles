@@ -9,4 +9,3 @@ vim.g.neovide_cursor_animation_length = 0
 vim.g.autoformat = false
 vim.g.sidescrolloff=999
 vim.o.background = 'light'
-

@@ -2,12 +2,16 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "noctis_lux",
-      background = "light"
+      colorscheme = "catppuccin",
     },
   },
 
-  { 'talha-akram/noctis.nvim' },
+  {
+    "project.nvim",
+    opts = {
+      manual_mode = false,
+    },
+  },
 
   {
     "echasnovski/mini.align",
@@ -17,17 +21,16 @@ return {
     end,
   },
 
-  -- Use hls and pyright from PATH, not mason
   {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        hls = {
-          mason = false,
-        },
-        pyright = {
-          mason = false,
-        },
+        hls     = { mason = false },
+        pyright = { mason = false },
+        metals  = { mason = false },
+        ruff    = { mason = false },
+        tflint  = { mason = false },
+        rust_analyzer = { mason = false },
       },
     },
   },
